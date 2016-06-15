@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="force_base_invoice.view_show_invoice_force_page_form"/>
             <field name="arch" type="xml">
                 <separator name="force_invoice_separator" position="after">
-                    <field name="internal_number" groups="force_base_invoice.force_group_invoice_manager" />
+                    <field name="internal_number" />
                 </separator>
             </field>
         </record>
