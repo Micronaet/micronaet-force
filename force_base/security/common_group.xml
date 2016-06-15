@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="force_group_master_category" model="ir.module.category">
+            <field name="name">Force category</field>
+            <field name="sequence">10</field>
+            <field name="description">Force category group</field>
+            <field name="visible" eval="1" />
+        </record>    
+    </data>
+</openerp>
+

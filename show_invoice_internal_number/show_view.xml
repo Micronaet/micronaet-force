@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_show_internal_number_form">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page/[@string='Force']/separator" position="after">
+                        <field name="internal_number" groups="force_base_invoice.force_group_invoice_manager" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
