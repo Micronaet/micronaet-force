@@ -4,11 +4,11 @@
         <record model="ir.ui.view" id="view_show_internal_number_form">
             <field name="name">account.invoice.form</field>
             <field name="model">account.invoice</field>
-            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="inherit_id" ref="force_base_invoice.view_show_invoice_force_page_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//notebook/page/[@string='Force']/separator" position="after">
-                        <field name="internal_number" groups="force_base_invoice.force_group_invoice_manager" />
-                </xpath>
+                <separator name="force_invoice_separator" position="after">
+                    <field name="internal_number" groups="force_base_invoice.force_group_invoice_manager" />
+                </separator>
             </field>
         </record>
     </data>

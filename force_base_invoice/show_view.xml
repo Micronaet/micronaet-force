@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page" position="after">
                     <page string="Force">
-                        <separator string="Force elements:" colspan="4"/>                        
+                        <separator string="Force elements:" colspan="4" name="force_invoice_separator"/>                    
                     </page>
                 </xpath>
             </field>
