@@ -2,13 +2,13 @@
 <openerp>
     <data>
          <record model="ir.ui.view" id="view_force_page_sale_order_form">
-             <field name="name">sale.order.form</field>
+             <field name="name">Sale force page</field>
              <field name="model">sale.order</field>
              <field name="inherit_id" ref="sale.view_order_form"/>
              <field name="arch" type="xml">
                  <xpath expr="//notebook/page[2]" position="after">
                      <page string="Force">
-                         <group colspan="4" col="4">
+                         <group colspan="4" col="4" name="force_group_master">
                              <separator string="Force procedure:" />
                          </group>    
                      </page>
