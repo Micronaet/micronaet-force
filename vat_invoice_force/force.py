@@ -48,7 +48,7 @@ class AccountInvoice(orm.Model):
     # -------------
     # Button event:
     # -------------
-    def force_invoice_vat(self, cr, uid, ids, context=None):
+    def force_invoice_tax(self, cr, uid, ids, context=None):
         ''' Force vat on all lines
         '''
         assert len(ids) == 1, 'Button only for one record a time!'
@@ -60,7 +60,7 @@ class AccountInvoice(orm.Model):
         invoice_proxy = self.browse(cr, uid, ids, context=context)[0]
         
         # Get 2 discount used onchange procedure from partner:
-        vat = invoice_proxy.force_vat_id.id
+        vat = invoice_proxy.force_tax_id.id
         if not vat:
             raise osv.except_osv(
                 _('Error'), 
@@ -68,7 +68,7 @@ class AccountInvoice(orm.Model):
             
         line_ids = [line.id for line in invoice_proxy.invoice_line]
         line_pool.write(cr, uid, line_ids, {
-            'tax_id': [(6, 0, (vat, ))],
+            'invoice_line_tax_id': [(6, 0, (vat, ))],
             }, context=context)
             
         # reset discount header value:    
