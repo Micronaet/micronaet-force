@@ -55,7 +55,7 @@ class AccountInvoice(orm.Model):
 
         # Pool used:
         partner_pool = self.pool.get('res.partner')
-        line_pool = self.pool.get('invoice.line')
+        line_pool = self.pool.get('account.invoice.line')
         
         invoice_proxy = self.browse(cr, uid, ids, context=context)[0]
         
