@@ -41,8 +41,7 @@ _logger = logging.getLogger(__name__)
 
 class SaleOrder(orm.Model):
     """ Model name: Sale order
-    """
-    
+    """    
     _inherit = 'sale.order'
     
     # -------------
