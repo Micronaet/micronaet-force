@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <openerp>
-    <data>
-         <record model="ir.ui.view" id="view_force_discount_order_form">
-             <field name="name">Order force discount</field>
-             <field name="model">sale.order</field>
-             <field name="inherit_id" ref="order_force_page.view_force_page_order_form"/>
-             <field name="arch" type="xml">
+    <data>       
+        <record model="ir.ui.view" id="view_sale_order_discount_force_form">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="order_force_page.view_force_page_sale_order_form"/>
+            <field name="arch" type="xml">
                  <xpath expr="//separator" position="after">
-                     <group name="force_discount" colspan="4" col="4">
+                     <group name="force_order_discount" colspan="4" col="4">
+                         <separator string="prova" />
                          <!--<field name="force_discount" />-->
                          <button name="force_order_discount" string="Force discount" type="object" />
                      </group>
                  </xpath>
-             </field>
-         </record>
+            </field>
+        </record>
     </data>
 </openerp>
-
