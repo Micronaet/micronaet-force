@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+         <record model="ir.ui.view" id="view_force_page_invoice_form">
+             <field name="name">account.invoice.form</field>
+             <field name="model">account.invoice</field>
+             <field name="inherit_id" ref="account.invoice_form"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//notebook/page[2]" position="after">
+                     <page string="Force">
+                         <group colspan="4" col="4">
+                             <separator string="Force procedure:" />
+                         </group>    
+                     </page>
+                 </xpath>
+             </field>
+         </record>
+    </data>
+</openerp>
+

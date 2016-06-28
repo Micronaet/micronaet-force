@@ -18,11 +18,11 @@
 ###############################################################################
 
 {
-    'name': 'Force invoice discount',
+    'name': 'Invoice page',
     'version': '0.1',
     'category': 'Invoice',
     'description': '''  
-        Chance in all lines discount multi with new value passed      
+        Add a page in notebook for force purposes (used by other module)      
         ''',
     'author': 'Micronaet S.r.l. - Nicola Riolini',
     'website': 'http://www.micronaet.it',
@@ -30,13 +30,11 @@
     'depends': [
         'base',
         'account',
-        'mx_discount_scale_invoice',
-        'invoice_force_page', # for add force page
         ],
     'init_xml': [],
     'demo': [],
     'data': [
-        'force_view.xml',
+        'invoice_page_view.xml',
         ],
     'active': False,
     'installable': True,
