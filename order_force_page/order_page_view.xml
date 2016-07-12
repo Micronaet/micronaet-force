@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-         <record model="ir.ui.view" id="view_force_page_sale_order_form">
-             <field name="name">Sale force page</field>
+         <record model="ir.ui.view" id="view_order_page_force_form">
+             <field name="name">sale.order.form</field>
              <field name="model">sale.order</field>
              <field name="inherit_id" ref="sale.view_order_form"/>
              <field name="arch" type="xml">
                  <xpath expr="//notebook/page[2]" position="after">
                      <page string="Force">
-                         <group colspan="4" col="4" name="force_group_master">
+                         <group colspan="4" col="4">
                              <separator string="Force procedure:" />
-                         </group>    
+                         </group>
                      </page>
                  </xpath>
              </field>
          </record>
     </data>
 </openerp>
+

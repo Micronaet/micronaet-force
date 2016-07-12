@@ -31,7 +31,7 @@
         'base',
         'sale',
         'mx_discount_scale_invoice',
-        'order_force_page', # for add force page        
+        'order_force_page',
         ],
     'init_xml': [],
     'demo': [],
