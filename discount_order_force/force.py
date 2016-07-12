@@ -54,16 +54,16 @@ class SaleOrder(orm.Model):
 
         # Pool used:
         partner_pool = self.pool.get('res.partner')
-        line_pool = self.pool.get('account.invoice.line')
+        line_pool = self.pool.get('sale.order.line')
         
-        invoice_proxy = self.browse(cr, uid, ids, context=context)[0]
+        sale_proxy = self.browse(cr, uid, ids, context=context)[0]
         
         # Get 2 discount used onchange procedure from partner:
-        multi_discount_rates = invoice_proxy.force_discount or '0'
+        multi_discount_rates = sale_proxy.force_discount or '0'
         discount = partner_pool.format_multi_discount(
             multi_discount_rates).get('value', 0.0)
 
-        line_ids = [line.id for line in invoice_proxy.invoice_line]
+        line_ids = [line.id for line in sale_proxy.order_line]
         line_pool.write(cr, uid, line_ids, {
             'multi_discount_rates': multi_discount_rates,
             'discount': discount,
