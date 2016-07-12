@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-         <record model="ir.ui.view" id="view_order_page_force_form">
+         <record model="ir.ui.view" id="view_fast_order_page_force_form">
              <field name="name">sale.order.form</field>
              <field name="model">sale.order</field>
              <field name="inherit_id" ref="sale_order_fast.view_sale_order_form_fast_form"/>
