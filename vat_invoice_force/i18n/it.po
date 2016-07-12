@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vat_invoice_force
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-12 06:53+0000\n"
+"PO-Revision-Date: 2016-07-12 06:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vat_invoice_force
+#: code:addons/vat_invoice_force/force.py:66
+#, python-format
+msgid "Error"
+msgstr "Errore"
+
+#. module: vat_invoice_force
+#: field:account.invoice,force_tax_id:0
+msgid "Force Tax"
+msgstr "Forza IVA"
+
+#. module: vat_invoice_force
+#: view:account.invoice:vat_invoice_force.view_force_vat_invoice_form
+msgid "Force VAT"
+msgstr "Force IVA"
+
+#. module: vat_invoice_force
+#: model:ir.model,name:vat_invoice_force.model_account_invoice
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: vat_invoice_force
+#: code:addons/vat_invoice_force/force.py:67
+#, python-format
+msgid "Set VAT tax before force!"
+msgstr "Imposta prima il valore dell'aliquota!"
+
