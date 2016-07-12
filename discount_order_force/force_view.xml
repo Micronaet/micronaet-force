@@ -9,7 +9,7 @@
                 <xpath expr="//page[@string='Force']/group" position="after">
                    <group colspan="4" col="4">
                          <field name="force_discount" />
-                         <button name="force_order_discount" string="Force discount" type="object"  alert="Force change discount value in all lines, confirm?"/>
+                         <button name="force_order_discount" string="Force discount" type="object" confirm="Force change discount value in all lines, confirm?"/>
                    </group>      
                 </xpath>
             </field>            
