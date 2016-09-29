@@ -55,10 +55,13 @@ class StockDDT(orm.Model):
         ddt_proxy = self.browse(cr, uid, ids, context=context)[0]
         date = ddt_proxy.date
         for pick in ddt_proxy.picking_ids:
+            # Force header
             stock_pool.write(cr, uid, pick.id, {
                 'date': date,
                 'min_date': date,
                 }, context=context)
+                
+            # Force line:    
             for line in pick.move_lines:
                 move_pool.write(cr, uid, line.id, {
                     'date': date,
