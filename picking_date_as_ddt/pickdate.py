@@ -51,6 +51,7 @@ class StockDDT(orm.Model):
         assert len(ids) == 1, 'Works only with one record a time'
         
         stock_pool = self.pool.get('stock.picking')
+        move_pool = self.pool.get('stock.move')
         ddt_proxy = self.browse(cr, uid, ids, context=context)[0]
         date = ddt_proxy.date
         for pick in ddt_proxy.picking_ids:
@@ -58,6 +59,11 @@ class StockDDT(orm.Model):
                 'date': date,
                 'min_date': date,
                 }, context=context)
+            for line in pick.move_lines:
+                move_pool.write(cr, uid, line.id, {
+                    'date': date,
+                    'date_expected': date,
+                    }, context=context)                    
         return True    
     
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
