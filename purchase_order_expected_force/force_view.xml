@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_sapurchasele_order_force_expected_date_form">
+            <field name="name">purchase.order.force.expected.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase_force_page.view_purchase_order_page_force_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Force']/group" position="after">
+                   <group colspan="4" col="4">
+                         <button name="force_purchase_expected" string="Force expected date" type="object" confirm="Force change expected date in pick document, confirm?"/>
+                   </group>      
+                </xpath>
+            </field>            
+        </record>
+
+    </data>
+</openerp>
+
