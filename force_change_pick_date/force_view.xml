@@ -8,8 +8,8 @@
                 <tree string="Picking" editable="bottom">        
                     <field name="name" readonly="1"/>
                     <field name="partner_id" readonly="1" />
-                    <field name="date" />
-                    <field name="date_min" readonly="1" />
+                    <field name="date" readonly="0" attrs="{'readonly': [('state', 'in', [])]}"/>
+                    <field name="min_date" readonly="1" />
                     <field name="state" readonly="1" />
                 </tree>
             </field>
