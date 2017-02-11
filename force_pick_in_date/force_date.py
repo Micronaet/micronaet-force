@@ -31,21 +31,10 @@ class stock_transfer_details(models.TransientModel):
         import pdb; pdb.set_trace()
         super(stock_transfer_details, self).do_detailed_transfer()
         import pdb; pdb.set_trace()
-        self.picking_id.write({'date': datetime.now()})
-        return True
-        
-    """def do_detailed_transfer(self, cr, uid, ids, context=None)
-        res = super(stock_transfer_details, self).do_detailed_transfer(
-            cr, uid, ids, context=context)
-        
-        # Update picking date:
-        current_proxy = self.browse(cr, uid, ids, context=context)[0]
-        self.pool.get('stock.picking').write(cr, uid, current_proxy.picking_id.id, {
+        self.picking_id.write({
+            'min_date': datetime.now(),
             'date': datetime.now(),
-            }, context=context)
-        return res    
-        self.picking_id.do_transfer()
+            })
+        return True
 
-        return True"""
-    
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

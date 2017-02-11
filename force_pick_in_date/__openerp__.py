@@ -20,7 +20,7 @@
 {
     'name': 'Force picking in date',
     'version': '0.1',
-    'category': 'Stock',
+    'category': 'stock',
     'description': '''
         Stock picking in force date as today        
         ''',
@@ -29,7 +29,7 @@
     'license': 'AGPL-3',
     'depends': [
         'base',
-        'stock',,
+        'stock',
         ],
     'init_xml': [],
     'demo': [],
