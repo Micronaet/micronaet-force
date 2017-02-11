@@ -28,9 +28,7 @@ class stock_transfer_details(models.TransientModel):
 
     @api.one
     def do_detailed_transfer(self):
-        import pdb; pdb.set_trace()
         super(stock_transfer_details, self).do_detailed_transfer()
-        import pdb; pdb.set_trace()
         self.picking_id.write({
             'min_date': datetime.now(),
             'date': datetime.now(),
