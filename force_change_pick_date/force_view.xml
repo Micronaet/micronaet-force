@@ -4,6 +4,7 @@
         <record model="ir.ui.view" id="view_stock_picking_force_date_tree">
             <field name="name">stock.picking.tree</field>
             <field name="model">stock.picking</field>
+            <field name="priority" eval="50" />
             <field name="arch" type="xml">
                 <tree string="Picking" editable="bottom">        
                     <field name="name" readonly="1"/>
