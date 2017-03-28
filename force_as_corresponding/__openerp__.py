@@ -31,6 +31,7 @@
         'base',
         'stock', 
         'l10n_it_ddt',
+        'mx_sale',
         ],
     'init_xml': [],
     'demo': [],

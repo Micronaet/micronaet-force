@@ -47,7 +47,24 @@ class StockPicking(orm.Model):
     def do_corresponding(self, cr, uid, ids, context=None):
         ''' Do correspond unload
         '''
-        return True
+        assert len(ids) == 1, 'Works only with one record a time'
+        
+        # Set move as done:
+        move_pool = self.pool.get('stock.move')
+        move_ids = move_pool.search(cr, uid, [
+            ('picking_id', '=', ids[0]),            
+            ], context=context)
+        move_pool.write(cr, uid, move_ids, {
+            'state': 'done',
+            }, context=context)    
+        
+        # Set document as done:    
+        self.write(cr, uid, ids, {
+            'correspond': True,
+            'state': 'done',
+            }, context=context)
+        return True 
+        #self.do_enter_transfer_details(cr, uid, ids, context=context)
     
     _columns = {
         'correspond': fields.boolean('Correspond document'),

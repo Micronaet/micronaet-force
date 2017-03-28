@@ -7,11 +7,18 @@
             <field name="inherit_id" ref="l10n_it_ddt.stock_ddt_form"/>
             <field name="arch" type="xml">          
                 <field name="partner_id" position="before">
-                    <button name="do_corresponding" string="Corrispettivo" type="object" />
+                    <button name="do_corresponding" string="Corrispettivo" type="object" attrs="{'invisible': [('state','=','done')]}"/>
                 </field>
-                <!--<field name="picking_ids" position="before">
-                    <button name="force_stock_date_as_ddt" string="Force date" type="object"/>
-                </field>-->
+            </field>
+        </record>    
+        <record model="ir.ui.view" id="view_stock_picking_in_form">
+            <field name="name">stock.picking.in.bf.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">        
+                <field name="partner_id" position="before">
+                    <button name="do_corresponding" string="Corrispettivo" type="object" attrs="{'invisible': [('state','=','done')]}" />
+                </field>
             </field>
         </record>    
     </data>
