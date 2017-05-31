@@ -8,6 +8,7 @@
             <field name="arch" type="xml">          
                 <field name="partner_id" position="before">
                     <button name="do_corresponding" string="Corrispettivo" type="object" attrs="{'invisible': [('state','=','done')]}"/>
+                    <newline/>
                 </field>
             </field>
         </record>    
@@ -18,6 +19,7 @@
             <field name="arch" type="xml">        
                 <field name="partner_id" position="before">
                     <button name="do_corresponding" string="Corrispettivo" type="object" attrs="{'invisible': [('state','=','done')]}" />
+                    <newline/>
                 </field>
             </field>
         </record>    
