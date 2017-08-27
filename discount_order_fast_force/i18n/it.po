@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* discount_order_force
+# 	* discount_order_fast_force
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-12 06:49+0000\n"
-"PO-Revision-Date: 2016-07-12 08:50+0100\n"
+"POT-Creation-Date: 2017-07-27 16:25+0000\n"
+"PO-Revision-Date: 2017-08-05 22:03+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,17 +17,12 @@ msgstr ""
 "Language: it\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. module: discount_order_force
-#: view:sale.order:discount_order_force.view_sale_order_force_discount_value_form
+#. module: discount_order_fast_force
+#: view:sale.order:discount_order_fast_force.view_fast_order_page_force_discount_form
+msgid "Force change discount value in all lines, confirm?"
+msgstr "Forzare il cambio del valore sconto su tutte le righe, confermi?"
+
+#. module: discount_order_fast_force
+#: view:sale.order:discount_order_fast_force.view_fast_order_page_force_discount_form
 msgid "Force discount"
 msgstr "Forza sconto"
-
-#. module: discount_order_force
-#: field:sale.order,force_discount:0
-msgid "New discount"
-msgstr "Nuovo sconto"
-
-#. module: discount_order_force
-#: model:ir.model,name:discount_order_force.model_sale_order
-msgid "Sales Order"
-msgstr "Ordine di vendita"
