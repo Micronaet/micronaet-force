@@ -26,11 +26,22 @@
         <record model="ir.ui.view" id="view_stock_picking_in_search">
             <field name="name">stock.picking.in.bf.search</field>
             <field name="model">stock.picking</field>
-            <field name="inherit_id" ref="l10n_it_ddt.view_pick_ddt_search"/>
+            <field name="inherit_id" ref="stock.view_picking_internal_search"/>
             <field name="arch" type="xml">
-              <field name="name" position="after">
-                 <filter name="correspond_yes" string="Corrispettivo" domain="[('correspond','=',True)]"/>
+               <field name="group_id" position="after">
+                   <filter name="correspond_yes" string="Corrispettivo" domain="[('correspond','=',True)]"/>
               </field>
+           </field>
+        </record>        
+        <record model="ir.ui.view" id="view_stock_move_in_search">
+            <field name="name">stock.move.in.bf.search</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_search"/>
+            <field name="arch" type="xml">
+               <field name="partner_id" position="after">
+                   <filter name="correspond_yes" string="Corrispettivo" domain="[('picking_id.correspond','=',True)]"/>
+              </field>
+           </field>
         </record>
     </data>
 </openerp>
