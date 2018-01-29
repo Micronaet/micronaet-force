@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* discount_invoice_force
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-27 16:25+0000\n"
+"PO-Revision-Date: 2017-08-05 22:02+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#. module: discount_invoice_force
+#: view:account.invoice:discount_invoice_force.view_force_discount_invoice_form
+msgid "Force change discount value in all lines, confirm?"
+msgstr "Forzare il cambiamento del valore sconto in tutte le righe, confermi?"
+
+#. module: discount_invoice_force
+#: view:account.invoice:discount_invoice_force.view_force_discount_invoice_form
+msgid "Force discount"
+msgstr "Forza sconto"
+
+#. module: discount_invoice_force
+#: model:ir.model,name:discount_invoice_force.model_account_invoice
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: discount_invoice_force
+#: field:account.invoice,force_discount:0
+msgid "New discount"
+msgstr "Nuovo sconto"
