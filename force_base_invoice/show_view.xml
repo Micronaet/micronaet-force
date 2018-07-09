@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook/page" position="after">
-                    <page string="Force" groups="force_base_invoice.force_group_invoice_manager">
+                    <page string="Force" invisible="1" groups="force_base_invoice.force_group_invoice_manager"><!-- XXX Module no more used -->
                         <separator string="Force elements:" colspan="4" name="force_invoice_separator"/>                    
                     </page>
                 </xpath>

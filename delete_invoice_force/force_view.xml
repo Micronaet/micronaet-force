@@ -6,7 +6,7 @@
              <field name="model">account.invoice</field>
              <field name="inherit_id" ref="invoice_force_page.view_force_page_invoice_form"/>
              <field name="arch" type="xml">
-                 <xpath expr="//page[@string='Force']//separator" position="after">
+                 <xpath expr="//page[@name='force_page']//separator" position="after">
                      <group name="force_delete_invoice" colspan="4" col="4">
                          <button name="force_invoice_deletion" string="Cancellazione fattura" type="object" confirm="Cancella la fattura e svincola i picking per una ulteriore rifatturazione, confermi?"/>
                      </group>

@@ -18,7 +18,7 @@
 ###############################################################################
 
 {
-    'name': 'Force invoice',
+    'name': 'Force invoice [TO BE REMOVE!!!]',
     'version': '0.1',
     'category': 'Force',
     'description': '''

@@ -7,7 +7,7 @@
              <field name="inherit_id" ref="account.invoice_form"/>
              <field name="arch" type="xml">
                  <xpath expr="//notebook/page[2]" position="after">
-                     <page string="Force" attrs="{'invisible':[('state','!=','draft')]}">
+                     <page string="Force" attrs="{'invisible':[('state','!=','draft')]}" name="force_page" groups="invoice_force_page.force_group_invoice_manager_page">
                          <group colspan="4" col="4">
                              <separator string="Force procedure:" />
                          </group>    

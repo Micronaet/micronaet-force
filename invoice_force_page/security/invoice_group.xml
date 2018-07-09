@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="force_group_invoice_manager_page" model="res.groups">
+            <field name="name">Invoice force manager page</field>
+            <field name="category_id" ref="force_base.force_group_master_category" />
+            <field name="comment">Force invoice group manager</field>
+        </record>
+    </data>
+</openerp>
+

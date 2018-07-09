@@ -34,6 +34,7 @@
     'init_xml': [],
     'demo': [],
     'data': [
+        'security/invoice_group.xml',
         'invoice_page_view.xml',
         ],
     'active': False,

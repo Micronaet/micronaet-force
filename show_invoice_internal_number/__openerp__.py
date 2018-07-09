@@ -29,7 +29,8 @@
     'license': 'AGPL-3',
     'depends': [
         'base',
-        'force_base_invoice',
+        #'force_base_invoice',
+        'invoice_force_page',
         'account',
         ],
     'init_xml': [],
