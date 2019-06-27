@@ -32,6 +32,7 @@
         'stock', 
         'l10n_it_ddt',
         'mx_sale',
+        'fast_stock_move',
         ],
     'init_xml': [],
     'demo': [],

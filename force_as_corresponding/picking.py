@@ -43,7 +43,26 @@ class StockPicking(orm.Model):
     """
     
     _inherit = 'stock.picking'
+
+    def dummy_button(self, cr, uid, ids, context=None):
+        ''' Dummy button
+        '''
+        return True
     
+    def correspond_checked_yes(self, cr, uid, ids, context=None):
+        ''' Set to yes
+        '''
+        return self.write(cr, uid, ids, {
+            'correspond_checked': True,
+            }, context=context)
+
+    def correspond_checked_no(self, cr, uid, ids, context=None):
+        ''' Set to no
+        '''
+        return self.write(cr, uid, ids, {
+            'correspond_checked': False,
+            }, context=context)
+            
     def do_corresponding(self, cr, uid, ids, context=None):
         ''' Do correspond unload
         '''
@@ -68,5 +87,6 @@ class StockPicking(orm.Model):
     
     _columns = {
         'correspond': fields.boolean('Correspond document'),
+        'correspond_checked': fields.boolean('Correspond checked'),        
         }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
